@@ -1,15 +1,15 @@
 class IosAppGenerator < Rails::Generators::Base
-  source_root File.expand_path('../templates', __FILE__)
+	source_root File.expand_path('../templates', __FILE__)
 
-  argument :model_name, :type => :string
+	argument :model_name, :type => :string
 
- 	def generate_controller
- 		template 'ViewController.h', "xcode_project/controllers/#{file_name}ViewController.h"
-  end
+	def generate_controller
+		template 'ViewController.h', "xcode_project/controllers/#{file_name}ViewController.h"
+	end
 
-  private
+	private
 
-  def file_name
-  	model_name
-  end
+	def file_name
+		model_name
+	end
 end
