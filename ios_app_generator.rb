@@ -4,7 +4,7 @@ class IosAppGenerator < Rails::Generators::Base
   argument :model_name, :type => :string
 
  	def generate_controller
- 		template 'ViewController', "xcode_project/controllers/#{file_name}ViewController.h"
+ 		template 'ViewController.h', "xcode_project/controllers/#{file_name}ViewController.h"
   end
 
   private
